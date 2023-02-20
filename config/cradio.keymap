@@ -39,7 +39,7 @@
                 wait-ms = <0>;
                 bindings = <&macro_press &lt 1 BSPC &kp LSHFT &hnt X>;
             }
-        }
+        };
     };
 
     conditional_layers {
