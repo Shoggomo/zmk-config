@@ -24,12 +24,12 @@
         hnt: hold_no_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&kp>;
+            bindings = <&kp &none>;
         };
         macros {
             rl_show_layer: rl_show_layer {
@@ -37,7 +37,7 @@
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&macro_press &lt 1 BSPC &kp LSHFT &hnt X>;
+                bindings = <&macro_press &lt 1 BSPC &hnt X X>;
             };
         };
     };
