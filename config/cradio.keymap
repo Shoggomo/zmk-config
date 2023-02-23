@@ -21,23 +21,13 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        hnt: hold_no_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&none>;
-        };
         macros {
             ll_show_layer: ll_show_layer {
                 compatible = "zmk,behavior-macro";
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&mo 2 &kp X>;
+                bindings = <&lt 2 TAB &kp X>;
                 // lt 2 TAB
             };
         };
