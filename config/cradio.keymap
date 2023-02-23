@@ -25,7 +25,7 @@
             label = "hold_left_layer";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&ll_show_layer>, <&kp>;
         };
