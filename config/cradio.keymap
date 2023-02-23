@@ -24,10 +24,10 @@
         h_ll: h_ll {
             label = "hold_left_layer";
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&ll_show_layer>, <&kp LSHIFT>;
+            bindings = <&ll_show_layer>, <&kp>;
         };
         macros {
             ll_show_layer: ll_show_layer {
@@ -65,7 +65,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &h_ll   &kp ENTER     &kp SPACE  &lt 1 LSHIFT
+                                            &h_ll 0 LSHIFT   &kp ENTER     &kp SPACE  &lt 1 LSHIFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
