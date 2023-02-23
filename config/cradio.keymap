@@ -37,7 +37,7 @@
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&macro_press &lt 1 BSPC &kp X>;
+                bindings = <&mo 1 &kp X>;
             };
         };
     };
