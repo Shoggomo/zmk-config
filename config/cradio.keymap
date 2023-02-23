@@ -21,13 +21,24 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+        h_ll: h_ll {
+            label = "hold_left_layer";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&ll_show_layer>, <&kp LSHIFT>;
+        };
         macros {
             ll_show_layer: ll_show_layer {
                 compatible = "zmk,behavior-macro";
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&kp X &lt 2 TAB>;
+                bindings = <&macro_press &mo 2>
+                , <&macro_tap &kp X>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 2>;
             };
         };
     };
@@ -54,7 +65,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ll_show_layer   &kp ENTER     &kp SPACE  &lt 1 LSHIFT
+                                            &h_ll   &kp ENTER     &kp SPACE  &lt 1 LSHIFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
