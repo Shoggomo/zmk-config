@@ -27,8 +27,7 @@
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&lt 2 TAB &kp X>;
-                // lt 2 TAB
+                bindings = <&kp X &lt 2 TAB>;
             };
         };
     };
