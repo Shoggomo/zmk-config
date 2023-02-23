@@ -37,7 +37,7 @@
                 label = "rl_show_layer";
                 #binding-cells = <0>;
                 wait-ms = <0>;
-                bindings = <&mo 1 &kp X>;
+                bindings = <&kp X &mo 1>;
             };
         };
     };
